@@ -1,2 +1,2 @@
-include ':app', ':feed'
+include ':app', ':feed', ':core'
 rootProject.name='SampleArch'
