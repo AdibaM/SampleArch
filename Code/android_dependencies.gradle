@@ -1,0 +1,10 @@
+/*Common file for android specific dependencies*/
+
+dependencies {
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "com.google.android.material:material:${material_version}"
+    api "androidx.appcompat:appcompat:${app_compat_version}"
+    api "androidx.core:core-ktx:${core_version}"
+    api "androidx.constraintlayout:constraintlayout:${constraintlayout_version}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}"
+}
