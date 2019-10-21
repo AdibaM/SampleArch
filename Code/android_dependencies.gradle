@@ -7,4 +7,5 @@ dependencies {
     api "androidx.core:core-ktx:${core_version}"
     api "androidx.constraintlayout:constraintlayout:${constraintlayout_version}"
     implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}"
+    implementation "io.reactivex.rxjava2:rxjava:${rxjava_version}"
 }
