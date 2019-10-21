@@ -2,24 +2,28 @@ package com.adibam.feed
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adibam.core.entities.Artist
+import com.adibam.feed.module.FeedModule
 import com.adibam.feed.ui.FeedAdapter
+import com.adibam.feed.viewmodel.FeedViewModel
 import kotlinx.android.synthetic.main.activity_feed.*
 
 class FeedActivity : AppCompatActivity() {
 
-    //TODO hardcoding now, these will come from a different source
-    private val artists = listOf(
-        Artist("Party Next door"),
-        Artist("Rosalia"),
-        Artist("Bad Bunny")
-    )
+    private lateinit var viewModel: FeedViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
+        viewModel = FeedModule.feedViewModel()
+        viewModel.feedLiveData().observe(this, Observer { displayArtists(it) })
         recycler_view.layoutManager = LinearLayoutManager(this)
+
+    }
+
+    private fun displayArtists(artists: List<Artist>) {
         recycler_view.adapter = FeedAdapter(artists)
     }
 }
