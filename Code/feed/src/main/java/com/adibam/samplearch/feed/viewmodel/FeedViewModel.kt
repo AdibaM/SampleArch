@@ -1,9 +1,9 @@
-package com.adibam.feed.viewmodel
+package com.adibam.samplearch.feed.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.adibam.core.artist.domain.Artist
-import com.adibam.feed.interactor.FeedInteractor
+import com.adibam.samplearch.feed.interactor.FeedInteractor
 import io.reactivex.Scheduler
 import io.reactivex.disposables.CompositeDisposable
 

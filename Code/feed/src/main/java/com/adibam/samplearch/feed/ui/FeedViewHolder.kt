@@ -1,4 +1,4 @@
-package com.adibam.feed.ui
+package com.adibam.samplearch.feed.ui
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

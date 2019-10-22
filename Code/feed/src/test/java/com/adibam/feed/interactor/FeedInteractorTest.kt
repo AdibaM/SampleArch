@@ -6,6 +6,7 @@ import com.adibam.core.network.api.ChartsApiService
 import com.adibam.core.network.model.ArtistModel
 import com.adibam.core.network.model.ArtistsModel
 import com.adibam.core.network.model.ChartsModel
+import com.adibam.samplearch.feed.interactor.FeedInteractor
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK

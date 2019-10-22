@@ -2,7 +2,8 @@ package com.adibam.feed.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.adibam.core.artist.domain.Artist
-import com.adibam.feed.interactor.FeedInteractor
+import com.adibam.samplearch.feed.interactor.FeedInteractor
+import com.adibam.samplearch.feed.viewmodel.FeedViewModel
 import io.mockk.every
 import io.mockk.mockk
 import io.reactivex.Single
@@ -25,7 +26,8 @@ class FeedViewModelTest {
     @Before
     fun setUp() {
         interactor = mockk()
-        underTest = FeedViewModel(interactor, Schedulers.trampoline())
+        underTest =
+            FeedViewModel(interactor, Schedulers.trampoline())
     }
 
     @Test

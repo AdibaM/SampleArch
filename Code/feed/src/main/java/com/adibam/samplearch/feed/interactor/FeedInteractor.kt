@@ -1,4 +1,4 @@
-package com.adibam.feed.interactor
+package com.adibam.samplearch.feed.interactor
 
 import com.adibam.core.artist.domain.Artist
 import com.adibam.core.artist.mapper.ArtistListMapper

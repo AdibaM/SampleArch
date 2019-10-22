@@ -1,10 +1,10 @@
-package com.adibam.feed.ui
+package com.adibam.samplearch.feed.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.adibam.core.artist.domain.Artist
-import com.adibam.feed.R
+import com.adibam.samplearch.feed.R
 
 class FeedAdapter(private val items: List<Artist>) : RecyclerView.Adapter<FeedViewHolder>() {
 
