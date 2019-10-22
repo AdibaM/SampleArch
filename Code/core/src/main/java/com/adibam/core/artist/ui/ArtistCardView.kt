@@ -1,11 +1,11 @@
-package com.adibam.core.ui
+package com.adibam.core.artist.ui
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.adibam.core.R
-import com.adibam.core.entities.Artist
+import com.adibam.core.artist.domain.Artist
 import kotlinx.android.synthetic.main.artist_card_view.view.*
 
 /**

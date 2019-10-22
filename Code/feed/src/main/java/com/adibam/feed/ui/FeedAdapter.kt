@@ -3,7 +3,7 @@ package com.adibam.feed.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.adibam.core.entities.Artist
+import com.adibam.core.artist.domain.Artist
 import com.adibam.feed.R
 
 class FeedAdapter(private val items: List<Artist>) : RecyclerView.Adapter<FeedViewHolder>() {

@@ -1,6 +1,6 @@
 package com.adibam.feed.interactor
 
-import com.adibam.core.entities.Artist
+import com.adibam.core.artist.domain.Artist
 import io.reactivex.Single
 
 /**

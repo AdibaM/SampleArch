@@ -1,7 +1,7 @@
 package com.adibam.feed.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.adibam.core.entities.Artist
+import com.adibam.core.artist.domain.Artist
 import com.adibam.feed.interactor.FeedInteractor
 import io.mockk.every
 import io.mockk.mockk

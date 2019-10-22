@@ -2,7 +2,7 @@ package com.adibam.feed.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.adibam.core.entities.Artist
+import com.adibam.core.artist.domain.Artist
 import com.adibam.feed.interactor.FeedInteractor
 import io.reactivex.Scheduler
 import io.reactivex.disposables.CompositeDisposable
