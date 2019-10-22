@@ -18,6 +18,7 @@ class FeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
         viewModel = FeedModule.feedViewModel()
+        viewModel.loadTopArtists()
         viewModel.feedLiveData().observe(this, Observer { displayArtists(it) })
         recycler_view.layoutManager = LinearLayoutManager(this)
 

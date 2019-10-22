@@ -2,7 +2,7 @@ package com.adibam.feed.interactor
 
 import com.adibam.core.artist.domain.Artist
 import com.adibam.core.artist.mapper.ArtistListMapper
-import com.adibam.core.repository.ChartsApiService
+import com.adibam.core.network.api.ChartsApiService
 import io.reactivex.Scheduler
 import io.reactivex.Single
 
@@ -20,6 +20,10 @@ class FeedInteractor(
     fun getArtists(): Single<List<Artist>> =
         chartsApi.getTopArtists()
             .subscribeOn(io)
-            .map { artistListMapper.map(it.artists) }
+            .map {
+                val chartsModel = it
+                artistListMapper.map(chartsModel.artists?.artist ?: emptyList())
+            }
+
 
 }

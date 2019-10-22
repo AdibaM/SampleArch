@@ -2,9 +2,10 @@ package com.adibam.feed.interactor
 
 import com.adibam.core.artist.domain.Artist
 import com.adibam.core.artist.mapper.ArtistListMapper
+import com.adibam.core.network.api.ChartsApiService
 import com.adibam.core.network.model.ArtistModel
+import com.adibam.core.network.model.ArtistsModel
 import com.adibam.core.network.model.ChartsModel
-import com.adibam.core.repository.ChartsApiService
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
@@ -35,10 +36,14 @@ class FeedInteractorTest {
 
     @Test
     fun `Returns artists when call to api is successful`() {
-        val artistModel = listOf(ArtistModel())
+        val listOfArtists = listOf(ArtistModel())
         val artists = listOf(Artist(("")))
-        every { chartsApi.getTopArtists() } returns Single.just(ChartsModel(artistModel))
-        every { mapper.map(artistModel) } returns artists
+        every { chartsApi.getTopArtists() } returns Single.just(
+            ChartsModel(
+                ArtistsModel(listOfArtists)
+            )
+        )
+        every { mapper.map(listOfArtists) } returns artists
 
         underTest.getArtists().subscribe(testSubscriber)
 

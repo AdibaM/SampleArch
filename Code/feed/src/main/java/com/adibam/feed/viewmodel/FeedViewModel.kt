@@ -12,18 +12,7 @@ class FeedViewModel(private val interactor: FeedInteractor, private val schedule
 
     private val disposable = CompositeDisposable()
 
-    //TODO hardcoding now, these will come from a different source
-    private val artists = listOf(
-        Artist("Party Next door"),
-        Artist("Rosalia"),
-        Artist("Bad Bunny")
-    )
-
     private val artistsLiveData = MutableLiveData<List<Artist>>()
-
-    init {
-        artistsLiveData.value = artists
-    }
 
     fun feedLiveData() = artistsLiveData
 
