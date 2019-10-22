@@ -1,6 +1,8 @@
 package com.adibam.samplearch.feed.ui
 
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +27,8 @@ class FeedActivity : AppCompatActivity() {
     }
 
     private fun displayArtists(artists: List<Artist>) {
+        recycler_view.visibility = VISIBLE
         recycler_view.adapter = FeedAdapter(artists)
+        progress_bar.visibility = GONE
     }
 }

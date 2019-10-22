@@ -1,4 +1,4 @@
-package com.adibam.samplearch.feed.ui.launch
+package com.adibam.samplearch.ui
 
 import android.content.ActivityNotFoundException
 import android.content.Intent

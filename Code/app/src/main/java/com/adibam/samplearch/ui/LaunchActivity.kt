@@ -1,4 +1,4 @@
-package com.adibam.samplearch.feed.ui.launch
+package com.adibam.samplearch.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,9 @@ class LaunchActivity : AppCompatActivity() {
         setContentView(R.layout.launch_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, LaunchFragment.newInstance())
+                .replace(R.id.container,
+                    LaunchFragment.newInstance()
+                )
                 .commitNow()
         }
     }
