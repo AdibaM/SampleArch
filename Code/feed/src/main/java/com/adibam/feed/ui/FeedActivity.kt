@@ -1,12 +1,12 @@
-package com.adibam.feed
+package com.adibam.feed.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adibam.core.artist.domain.Artist
+import com.adibam.feed.R
 import com.adibam.feed.module.FeedModule
-import com.adibam.feed.ui.FeedAdapter
 import com.adibam.feed.viewmodel.FeedViewModel
 import kotlinx.android.synthetic.main.activity_feed.*
 

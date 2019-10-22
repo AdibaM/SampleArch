@@ -14,7 +14,7 @@ class ChartsApiParamsBuilderTest {
         assertEquals("chart.gettopartists", params["method"])
         assertEquals("0d38b9dc4dd5c46b0617c11db65d642d", params["api_key"])
         assertEquals("json", params["format"])
-        assertEquals("5", params["limit"])
+        assertEquals("20", params["limit"])
     }
 
 }

@@ -15,16 +15,7 @@ class ChartsApiParamsBuilder {
             METHOD to TOP_ARTISTS,
             API_KEY to ChartsRestApi.API_KEY,
             FORMAT to "json",
-            LIMIT to "5"
+            LIMIT to "20"
         )
     }
-/*
-    private val params =
-        "?method=${Endpoints.TOP_ARTISTS_CHARTS_ENDPOINT}" +
-                "&" +
-                "api_key=0d38b9dc4dd5c46b0617c11db65d642d" +
-                "&" +
-                "format=json" +
-                "&" +
-                "limit=5"*/
 }
