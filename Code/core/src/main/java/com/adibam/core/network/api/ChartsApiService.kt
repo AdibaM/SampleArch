@@ -16,4 +16,8 @@ class ChartsApiService(
     fun getTopArtists(): Single<ChartsModel> {
         return api.getTopArtistsChart(paramsBuilder.chartsParams())
     }
+
+    fun getTopTrends(): Single<ChartsModel> {
+        return Single.just(ChartsModel(artists = null))
+    }
 }
