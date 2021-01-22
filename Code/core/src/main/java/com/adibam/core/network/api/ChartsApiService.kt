@@ -20,4 +20,8 @@ class ChartsApiService(
     fun getTopTrends(): Single<ChartsModel> {
         return Single.just(ChartsModel(artists = null))
     }
+
+    fun getTopVideos(): Single<ChartsModel> {
+        return Single.just(ChartsModel(artists = null))
+    }
 }
